@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500;700&family=Yellowtail&display=swap");
+
+/* #274c5b blue */
+/* #efd372 yellow */
+/* #7eb693 green */
+/* #525c60 gray */
+
+:root {
+  --font-body: "Open Sans", sans-serif;
+  --font-cursive: "Yellowtail", cursive;
+  --font-sans-serif: "Roboto", sans-serif;
+
+  --clr-green: #7eb693;
+  --clr-yellow: #efd372;
+  --clr-dk-blue: #274c5b;
+  --clr-dk-gray: #525c60;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--clr-dk-gray);
+}
+
+.alt-title {
+  font-family: var(--font-cursive);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans-serif);
+  color: var(--clr-dk-blue);
+}
+
+/* .alternative-section {
+    --clr-dk-blue:#f53900;
+} */
+
+header {
+  max-width: 1600px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  padding-block: 50px;
+}
+
+header img.logo {
+  margin-right: 100px;
+}
+
+nav {
+  margin-right: auto;
+}
+
+nav .nav-link {
+  font-family: var(--font-sans-serif);
+  font-weight: 500;
+  font-size: 20px;
+  padding: 20px;
+  color: var(--clr-dk-blue);
+  text-decoration: none;
+}
+
+nav .nav-link.active,
+nav .nav-link:hover {
+} /* same as below */
+
+nav .nav-link:is(.active, :hover) {
+  color: var(--clr-green);
+}
+
+.cart-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-radius: 100px;
+  padding: 10px 30px 10px 10px;
+
+  background-color: transparent;
+  border-style: unset;
+  border: 1px solid #c4c4c4;
+
+  font-family: var(--font-sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-dk-blue);
+
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: var(--clr-green);
+  border-color: var(--clr-green);
+  color: white;
+}
+
+.cart-btn .cart-icon-container {
+  background-color: var(--clr-dk-blue);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

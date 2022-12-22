@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box sizing test</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        h1,
+        h3 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            vertical-align: middle;
+            overflow: auto;
+        }
+
+        .box::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        .box::-webkit-scrollbar-track {
+            /* background-color: gray; */
+        }
+
+        .box::-webkit-scrollbar-thumb {
+            background-color: red;
+            /* border: 4px solid gray; */
+            border-radius: 20px;
+        }
+
+        .aqua {
+            background-color: aqua;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-inline: auto;
+            min-height: 50vh;
+            margin-top: 25vh;
+            background-color: #ededed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <h1>Testing title</h1>
+    <h3> - Another titile</h3>
+
+    <br>
+    <div class="box aqua"><img
+            src="https://images.unsplash.com/photo-1671695063322-1cd606e2f049?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt=""> </div>
+    <div class="box coral">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Nihil, ullam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+        ipsum, dolor sit amet
+        consectetur adipisicing elit. Nihil, ullam! </div> -->
+
+
+    <div class="container">
+        <div class="box aqua"></div>
+        <div class="box coral"></div>
+    </div>
+
+
+</body>
+
+</html>
