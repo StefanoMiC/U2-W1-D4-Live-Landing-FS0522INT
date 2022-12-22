@@ -10,6 +10,7 @@
   --font-cursive: "Yellowtail", cursive;
   --font-sans-serif: "Roboto", sans-serif;
 
+  --clr-light-green: #eff6f1;
   --clr-green: #7eb693;
   --clr-yellow: #efd372;
   --clr-dk-blue: #274c5b;
@@ -23,6 +24,19 @@ body {
 
 .alt-title {
   font-family: var(--font-cursive);
+  text-transform: capitalize;
+  font-size: 36px;
+  color: var(--clr-green);
+  margin-top: 0;
+}
+
+.main-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: var(--font-sans-serif);
+  font-size: 65px;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 h1,
@@ -35,9 +49,39 @@ h6 {
   color: var(--clr-dk-blue);
 }
 
+button {
+  color: var(--clr-dk-blue);
+  background-color: transparent;
+  border-style: unset;
+  border: 1px solid #c4c4c4;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: var(--font-sans-serif);
+}
+
+button.bold {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+button.yellow {
+  background-color: var(--clr-yellow);
+  border-color: var(--clr-yellow);
+  padding: 24px 70px 24px 32px;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
 /* .alternative-section {
     --clr-dk-blue:#f53900;
 } */
+
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
 
 header {
   max-width: 1600px;
@@ -68,8 +112,34 @@ nav .nav-link.active,
 nav .nav-link:hover {
 } /* same as below */
 
-nav .nav-link:is(.active, :hover) {
+nav .nav-link:is(.active, :hover):not(div.nav-link) {
   color: var(--clr-green);
+}
+
+nav .dropdown {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+nav .dropdown .dropdown-list {
+  background-color: var(--clr-light-green);
+  padding-block: 10px;
+  position: absolute;
+  display: none;
+}
+
+nav .dropdown .dropdown-list .nav-link {
+  display: block;
+  padding-block: 10px;
+}
+
+nav .dropdown > div.nav-link {
+  padding-left: 0;
+  cursor: pointer;
+}
+
+nav .dropdown:hover .dropdown-list {
+  display: block;
 }
 
 .cart-btn {
@@ -78,17 +148,10 @@ nav .nav-link:is(.active, :hover) {
   column-gap: 10px;
   border-radius: 100px;
   padding: 10px 30px 10px 10px;
-
-  background-color: transparent;
-  border-style: unset;
-  border: 1px solid #c4c4c4;
-
-  font-family: var(--font-sans-serif);
   font-size: 18px;
-  font-weight: 500;
   color: var(--clr-dk-blue);
-
-  cursor: pointer;
+  font-weight: 500;
+  border-radius: 100px;
 }
 
 .cart-btn:hover {
@@ -105,4 +168,12 @@ nav .nav-link:is(.active, :hover) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero-section {
+  background-image: url("../imgs/hero-area-background.jpg");
+  background-size: cover;
+}
+.hero {
+  min-height: calc(100vh - 178px);
 }
